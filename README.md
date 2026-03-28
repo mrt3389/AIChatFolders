@@ -1,7 +1,7 @@
 # 汇聊 (HuiLiao)
 
 <div align="center">
-  <img src="assets/icons/icon-128.png" alt="汇聊" width="128" height="128">
+  <img src="assets/icons/icon-128.png" alt="汇聊图标" width="128" height="128">
   
   <p><strong>AI 聊天记录管理助手</strong></p>
   <p>一款强大的浏览器插件，为DeepSeek、豆包、Kimi等提供聊天记录管理功能；可设置文件夹、智能搜索等功能</p>
