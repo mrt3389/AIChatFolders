@@ -1,10 +1,10 @@
 # 汇聊 (HuiLiao)
 
 <div align="center">
-  <img src="ai-chat-folders/assets/icons/icon-128.png" alt="汇聊图标" width="128" height="128">
+  <img src="assets/icons/icon-128.png" alt="汇聊" width="128" height="128">
   
-  <p><strong>AI 聊天文件夹管理助手</strong></p>
-  <p>一款强大的浏览器插件，为DeepSeek、豆包、Kimi 等提供聊天历史管理功能文件夹管理、智能搜索等功能</p>
+  <p><strong>AI 聊天记录管理助手</strong></p>
+  <p>一款强大的浏览器插件，为DeepSeek、豆包、Kimi等提供聊天记录管理功能；可设置文件夹、智能搜索等功能</p>
 
 [![Chrome](https://img.shields.io/badge/Chrome-支持-brightgreen?logo=google-chrome)](https://www.google.com/chrome/)
 [![Firefox](https://img.shields.io/badge/Firefox-支持-brightgreen?logo=firefox)](https://www.mozilla.org/firefox/)
