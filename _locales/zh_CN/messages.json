@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "汇聊",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "AI 聊天文件夹管理 — 为豆包、Kimi、DeepSeek 提供文件夹整理、置顶、搜索和拖拽功能",
+    "description": "Extension description"
+  },
+  "sidebarTitle": {
+    "message": "汇聊",
+    "description": "Sidebar panel title"
+  },
+  "searchPlaceholder": {
+    "message": "搜索对话...",
+    "description": "Search input placeholder"
+  },
+  "pinnedSection": {
+    "message": "已置顶",
+    "description": "Pinned conversations section title"
+  },
+  "unfiledSection": {
+    "message": "未分类",
+    "description": "Unfiled conversations section title"
+  },
+  "newFolder": {
+    "message": "新建文件夹",
+    "description": "Create new folder button"
+  },
+  "rename": {
+    "message": "重命名",
+    "description": "Rename action"
+  },
+  "delete": {
+    "message": "删除",
+    "description": "Delete action"
+  },
+  "pin": {
+    "message": "置顶",
+    "description": "Pin action"
+  },
+  "unpin": {
+    "message": "取消置顶",
+    "description": "Unpin action"
+  },
+  "moveToFolder": {
+    "message": "移动到文件夹",
+    "description": "Move to folder action"
+  },
+  "removeFromFolder": {
+    "message": "移出文件夹",
+    "description": "Remove from folder action"
+  },
+  "confirmDelete": {
+    "message": "确定要删除「$1」吗？",
+    "description": "Delete confirmation message",
+    "placeholders": {
+      "1": { "content": "$1" }
+    }
+  },
+  "confirmDeleteFolder": {
+    "message": "删除文件夹「$1」？其中的对话将移到未分类。",
+    "description": "Delete folder confirmation",
+    "placeholders": {
+      "1": { "content": "$1" }
+    }
+  },
+  "exportData": {
+    "message": "导出数据",
+    "description": "Export data button"
+  },
+  "importData": {
+    "message": "导入数据",
+    "description": "Import data button"
+  },
+  "settings": {
+    "message": "设置",
+    "description": "Settings tab"
+  },
+  "theme": {
+    "message": "主题",
+    "description": "Theme setting"
+  },
+  "themeAuto": {
+    "message": "跟随平台",
+    "description": "Auto theme option"
+  },
+  "themeLight": {
+    "message": "浅色",
+    "description": "Light theme option"
+  },
+  "themeDark": {
+    "message": "深色",
+    "description": "Dark theme option"
+  },
+  "noResults": {
+    "message": "未找到匹配的对话",
+    "description": "No search results message"
+  },
+  "folderEmpty": {
+    "message": "拖拽对话到此处",
+    "description": "Empty folder placeholder"
+  },
+  "addSubfolder": {
+    "message": "新建子文件夹",
+    "description": "Add subfolder action"
+  },
+  "setColor": {
+    "message": "设置颜色",
+    "description": "Set folder color action"
+  },
+  "openConversation": {
+    "message": "打开对话",
+    "description": "Open conversation action"
+  }
+}

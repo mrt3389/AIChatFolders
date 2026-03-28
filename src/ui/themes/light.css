@@ -1,0 +1,36 @@
+:host,
+:host([data-acf-theme="light"]) {
+  --acf-bg-primary: #ffffff;
+  --acf-bg-secondary: #f7f8fa;
+  --acf-bg-tertiary: #eef0f4;
+  --acf-bg-hover: #f0f1f3;
+  --acf-bg-active: #e8eaed;
+  --acf-bg-drag-target: #e3f2fd;
+
+  --acf-text-primary: #1a1a2e;
+  --acf-text-secondary: #5f6368;
+  --acf-text-tertiary: #9aa0a6;
+  --acf-text-inverse: #ffffff;
+
+  --acf-accent: #4a90d9;
+  --acf-accent-hover: #3a7bc8;
+  --acf-accent-light: #e8f0fe;
+
+  --acf-border: #e0e0e0;
+  --acf-border-light: #f0f0f0;
+
+  --acf-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --acf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --acf-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  --acf-pin-color: #f59e0b;
+  --acf-drag-highlight: rgba(74, 144, 217, 0.15);
+  --acf-drag-border: #4a90d9;
+
+  --acf-danger: #ef4444;
+  --acf-danger-hover: #dc2626;
+  --acf-success: #22c55e;
+
+  --acf-scrollbar-thumb: #c1c1c1;
+  --acf-scrollbar-track: transparent;
+}

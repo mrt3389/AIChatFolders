@@ -1,0 +1,19 @@
+{
+  "name": "ai-chat-folders",
+  "version": "1.0.0",
+  "description": "Folder management for AI chat platforms (Doubao, Kimi, DeepSeek)",
+  "private": true,
+  "scripts": {
+    "build:dev": "node scripts/build.js --dev",
+    "build:chrome": "node scripts/build.js --chrome",
+    "build:firefox": "node scripts/build.js --firefox",
+    "watch": "node scripts/build.js --dev --watch",
+    "pack:chrome": "node scripts/pack-chrome.js",
+    "pack:firefox": "node scripts/pack-firefox.js"
+  },
+  "devDependencies": {
+    "terser": "^5.31.0",
+    "csso": "^5.0.5",
+    "chokidar": "^3.6.0"
+  }
+}

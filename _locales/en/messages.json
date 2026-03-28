@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "HuiLiao",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Folder management for AI chat platforms — organize, pin, search and drag-drop for Doubao, Kimi, DeepSeek",
+    "description": "Extension description"
+  },
+  "sidebarTitle": {
+    "message": "HuiLiao",
+    "description": "Sidebar panel title"
+  },
+  "searchPlaceholder": {
+    "message": "Search conversations...",
+    "description": "Search input placeholder"
+  },
+  "pinnedSection": {
+    "message": "Pinned",
+    "description": "Pinned conversations section title"
+  },
+  "unfiledSection": {
+    "message": "Unfiled",
+    "description": "Unfiled conversations section title"
+  },
+  "newFolder": {
+    "message": "New Folder",
+    "description": "Create new folder button"
+  },
+  "rename": {
+    "message": "Rename",
+    "description": "Rename action"
+  },
+  "delete": {
+    "message": "Delete",
+    "description": "Delete action"
+  },
+  "pin": {
+    "message": "Pin",
+    "description": "Pin action"
+  },
+  "unpin": {
+    "message": "Unpin",
+    "description": "Unpin action"
+  },
+  "moveToFolder": {
+    "message": "Move to Folder",
+    "description": "Move to folder action"
+  },
+  "removeFromFolder": {
+    "message": "Remove from Folder",
+    "description": "Remove from folder action"
+  },
+  "confirmDelete": {
+    "message": "Delete \"$1\"?",
+    "description": "Delete confirmation message",
+    "placeholders": {
+      "1": { "content": "$1" }
+    }
+  },
+  "confirmDeleteFolder": {
+    "message": "Delete folder \"$1\"? Conversations inside will be moved to Unfiled.",
+    "description": "Delete folder confirmation",
+    "placeholders": {
+      "1": { "content": "$1" }
+    }
+  },
+  "exportData": {
+    "message": "Export Data",
+    "description": "Export data button"
+  },
+  "importData": {
+    "message": "Import Data",
+    "description": "Import data button"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings tab"
+  },
+  "theme": {
+    "message": "Theme",
+    "description": "Theme setting"
+  },
+  "themeAuto": {
+    "message": "Follow Platform",
+    "description": "Auto theme option"
+  },
+  "themeLight": {
+    "message": "Light",
+    "description": "Light theme option"
+  },
+  "themeDark": {
+    "message": "Dark",
+    "description": "Dark theme option"
+  },
+  "noResults": {
+    "message": "No matching conversations found",
+    "description": "No search results message"
+  },
+  "folderEmpty": {
+    "message": "Drag conversations here",
+    "description": "Empty folder placeholder"
+  },
+  "addSubfolder": {
+    "message": "New Subfolder",
+    "description": "Add subfolder action"
+  },
+  "setColor": {
+    "message": "Set Color",
+    "description": "Set folder color action"
+  },
+  "openConversation": {
+    "message": "Open Conversation",
+    "description": "Open conversation action"
+  }
+}

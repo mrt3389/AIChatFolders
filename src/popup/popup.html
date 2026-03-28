@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>汇聊</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <!-- Header -->
+    <div class="popup-header">
+      <div class="popup-header__logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span>汇聊</span>
+      </div>
+      <span class="popup-header__version" id="version"></span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="popup-tabs">
+      <button class="popup-tab popup-tab--active" data-tab="folders">文件夹</button>
+      <button class="popup-tab" data-tab="search">搜索</button>
+      <button class="popup-tab" data-tab="settings">设置</button>
+      <button class="popup-tab" data-tab="sync">同步</button>
+    </div>
+
+    <!-- Folders Tab -->
+    <div class="popup-panel popup-panel--active" data-panel="folders">
+      <div class="popup-section">
+        <div class="popup-section__header">
+          <span>文件夹列表</span>
+          <button class="popup-btn popup-btn--sm popup-btn--primary" id="btn-new-folder">+ 新建</button>
+        </div>
+        <div id="folder-list" class="popup-folder-list">
+          <div class="popup-empty">加载中...</div>
+        </div>
+      </div>
+      <div class="popup-section">
+        <div class="popup-section__header">统计</div>
+        <div class="popup-stats" id="stats">
+          <div class="popup-stat"><span class="popup-stat__value" id="stat-folders">-</span><span class="popup-stat__label">文件夹</span></div>
+          <div class="popup-stat"><span class="popup-stat__value" id="stat-conversations">-</span><span class="popup-stat__label">对话</span></div>
+          <div class="popup-stat"><span class="popup-stat__value" id="stat-pinned">-</span><span class="popup-stat__label">已置顶</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Tab -->
+    <div class="popup-panel" data-panel="search">
+      <div class="popup-search">
+        <div class="popup-search__input-wrapper">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="search-input" placeholder="搜索所有平台的对话..." />
+        </div>
+        <select id="search-platform-filter" class="popup-select">
+          <option value="">全部平台</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="kimi">Kimi</option>
+          <option value="doubao">豆包</option>
+        </select>
+      </div>
+      <div id="search-results" class="popup-search-results">
+        <div class="popup-empty">输入关键词开始搜索</div>
+      </div>
+    </div>
+
+    <!-- Settings Tab -->
+    <div class="popup-panel" data-panel="settings">
+      <div class="popup-section">
+        <div class="popup-setting">
+          <label>主题</label>
+          <select id="setting-theme" class="popup-select">
+            <option value="auto">跟随平台</option>
+            <option value="light">浅色</option>
+            <option value="dark">深色</option>
+          </select>
+        </div>
+        <div class="popup-setting">
+          <label>启用的平台</label>
+          <div class="popup-checkboxes">
+            <label class="popup-checkbox"><input type="checkbox" id="platform-deepseek" value="deepseek" checked /> DeepSeek</label>
+            <label class="popup-checkbox"><input type="checkbox" id="platform-kimi" value="kimi" checked /> Kimi</label>
+            <label class="popup-checkbox"><input type="checkbox" id="platform-doubao" value="doubao" checked /> 豆包</label>
+          </div>
+        </div>
+        <div class="popup-setting">
+          <label>删除前确认</label>
+          <label class="popup-switch">
+            <input type="checkbox" id="setting-confirm-delete" checked />
+            <span class="popup-switch__slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sync Tab -->
+    <div class="popup-panel" data-panel="sync">
+      <div class="popup-section">
+        <div class="popup-section__header">数据备份与恢复</div>
+        <p class="popup-text">所有数据存储在本地浏览器中。使用导入/导出功能在不同设备之间同步数据。</p>
+        <div class="popup-sync-actions">
+          <button class="popup-btn popup-btn--primary popup-btn--block" id="btn-export">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            导出数据 (JSON)
+          </button>
+          <button class="popup-btn popup-btn--block" id="btn-import">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            导入数据 (JSON)
+          </button>
+          <input type="file" id="import-file-input" accept=".json" style="display: none;" />
+        </div>
+        <div id="sync-status" class="popup-sync-status" style="display: none;"></div>
+      </div>
+      <div class="popup-section">
+        <div class="popup-section__header">危险操作</div>
+        <button class="popup-btn popup-btn--danger popup-btn--block" id="btn-clear-data">清除所有数据</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../utils/browser-compat.js"></script>
+  <script src="../utils/uuid.js"></script>
+  <script src="../utils/sanitize.js"></script>
+  <script src="../core/message-bus.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
